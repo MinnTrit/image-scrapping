@@ -1,1 +1,1 @@
-"# image-scrapping" 
+"# image-scrapping" - Total scrapped data points (Unique scalar color code) was more than 70k, and there was a total of 24k unique color codes out of those, expect the model to learn effectively when the total data points reach to 160k - 240k.
