@@ -80,5 +80,5 @@ df2 = ranking_column(df2)
 df3 = ranking_column(df3) 
 df4 = ranking_column(df4)
 ```
-Now that with the targeted vairables and the color codes preproccessed, you can use these data samples to train the model :3, thanks for reading my notes
+Now that with the targeted vairables and the color codes preproccessed, you can use these data samples to train the model :3, thanks for reading my notes!!!
 
