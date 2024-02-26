@@ -9,7 +9,7 @@ For Unpslash, the source containing image (Most of the data points have been com
 For each source, the score feature will be sorted ascendingly and ranked with the targeted variable [0, 1, 2, 3] to avoid potential bias while combining multiple sources and rank all of them once. 
 
 ### INSTALLING THE NECCESSARIES LIBRARIES
-  Some external libraries for the code that I have been used for this project: 
+  * Some external libraries for the code that I have been used for this project: 
     * Web crawlling: 
       * Playwright: ```pip install playwright```
     * Data Processing: 
