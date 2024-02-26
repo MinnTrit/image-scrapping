@@ -37,9 +37,9 @@ For each source, the score feature will be sorted ascendingly and ranked with th
 Usage example:
 ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/857d7c5b-fb17-42dd-bbb5-dc66696c432b)
 
-  *Extracting the color code from the remaining images: 
-    *The class method *color_extracting* of the class *ColorCode* can be used to achieve this desired behavior:
-      *It takes in 2 keyword arguments, including *[folder_name, total_code]*. Where *folder_name* refers to the scrapped images folder, and the *total_code* refers to the number of color to be extracted from the image, which is *10* in this case. You can access the result of this process by accessing the attribute *output_list* of this class instance to see the result. 
+  * Extracting the color code from the remaining images: 
+    * The class method *color_extracting* of the class *ColorCode* can be used to achieve this desired behavior:
+      * It takes in 2 keyword arguments, including *[folder_name, total_code]*. Where *folder_name* refers to the scrapped images folder, and the *total_code* refers to the number of color to be extracted from the image, which is *10* in this case. You can access the result of this process by accessing the attribute *output_list* of this class instance to see the result. 
 Usage example: 
 ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/9b2336d6-c487-4fba-b66a-3c064ddda9ed)
 
@@ -61,7 +61,7 @@ Usage example:
 ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/125c88b2-4545-4d60-b56c-354ffc9e1df6)
 
 ### Preparing the targeted variable for the machine learning model: 
-  *As stated previously, each source should be ranked individually to avoid potential bias while fetching data from multiple sources, the code sipnet below will give you the general concept to rank the color code based on the *score* of its own source: 
+  * As stated previously, each source should be ranked individually to avoid potential bias while fetching data from multiple sources, the code sipnet below will give you the general concept to rank the color code based on the *score* of its own source: 
 ```
 def ranking_column(data_frame): 
     column_list = data_frame.columns.tolist()
