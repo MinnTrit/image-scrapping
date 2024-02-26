@@ -54,9 +54,9 @@ After the completion of the process, you can refer to *image_list.output_list* t
         * This image will then be converted to the following result after calling this method ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/3c60c1df-f239-4ea8-95d8-5e0903b068d2)
 
         * For the *image_score excel file*, the purpose is to convert the "image_name" column from *integer number*, for example, *0* to the string with *.png* extension as *0.png* and the "score" column to be cleaned and converted to *integer number*.
-        * After calling this class method on the instance, you can refer to the attribute *result* of this instance to access the actual data frame result of this method.
-Usage example (You can pass in the dataframe from the previous process, for this example, the contents from the previous process were saved as the excel file):
-![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/bc37305d-5a2a-4c7b-8f0f-93c888409f35)
+        * After calling this class method on the instance, you can refer to the attribute *result* of this instance as have done previously to access the actual data frame result of this method.
+Usage example:
+![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/55f13cdf-3b56-4c07-b443-743d4d7f5f9a)
 
   * Merging the data frame and push the data to the database: 
     * Since you have cleaned up 2 data frames, both for the scrapped images and their image scores, the 2 data frames can join each other on the *image_name* column. Afterward, you can import the method *to_database* from this module to push this data frame to the destinated source. 
