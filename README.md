@@ -61,7 +61,7 @@ Usage example:
   * Merging the data frame and push the data to the database: 
     * Since you have cleaned up 2 data frames, both for the scrapped images and their image scores, the 2 data frames can join each other on the *image_name* column. Afterward, you can import the method *to_database* from this module to push this data frame to the destinated source. 
 Usage example:
-![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/125c88b2-4545-4d60-b56c-354ffc9e1df6)
+![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/4df0d5f3-309d-4539-a584-ea4cda196649)
 
 ### Preparing the targeted variable for the machine learning model: 
   * As stated previously, each source should be ranked individually to avoid potential bias while fetching data from multiple sources, the code sipnet below will give you the general concept to rank the color code based on the *score* of its own source: 
