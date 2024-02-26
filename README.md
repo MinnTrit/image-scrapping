@@ -29,7 +29,7 @@ For each source, the score feature will be sorted ascendingly and ranked with th
       * Pytorch: ```pip install torch``` 
       * Sklearn: ```pip install scikit-learn``` 
 
-### How to use the customized module
+### HOW TO USE THE CUSTOMIZED MODULE
   The main purpose of this module is to normalize the scrapped color code coming from Unsplash
   * Removing images with the instance method *removing_image*:
     * Understanding the concept for why it will be essential to remove the images:
