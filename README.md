@@ -56,7 +56,7 @@ After the completion of the process, you can refer to *image_output.output_list*
 Usage example (You can pass in the dataframe from the previous process, for this example, the contents from the previous process were saved as the excel file):
 ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/bc37305d-5a2a-4c7b-8f0f-93c888409f35)
 
-  *Merging the data frame and push the data to the database: 
+  * Merging the data frame and push the data to the database: 
     * Since you have cleaned up 2 data frames, both for the scrapped images and their image scores, the 2 data frames can join each other on the *image_name* column. Afterward, you can import the method *to_database* from this module to push this data frame to the destinated source. 
 Usage example:
 ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/125c88b2-4545-4d60-b56c-354ffc9e1df6)
