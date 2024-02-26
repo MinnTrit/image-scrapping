@@ -8,6 +8,9 @@ For Unpslash, the source containing image (Most of the data points have been com
 
 For each source, the score feature will be sorted ascendingly and ranked with the targeted variable [0, 1, 2, 3] to avoid potential bias while combining multiple sources and rank all of them once. 
 
+### Working along way
+ * There is the *Sample* folder where you can refer to and download the newest scrapped, from there, you can try and follow with the codes' instructions to test out how it works!!!
+
 ### INSTALLING THE NECCESSARIES LIBRARIES
   * Some external libraries for the code that I have been used for this project: 
     * Web crawlling: 
