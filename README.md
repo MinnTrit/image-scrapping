@@ -18,9 +18,9 @@ For each source, the score feature will be sorted ascendingly and ranked with th
       * Numpy: ```pip install numpy```
     * Image processing: 
       * Color Thief: ```pip install colorthief```
-    *Database interactions: 
+    * Database interactions: 
       * SQLAlchemy & MySQLClient: ```pip install SQLAlchemy``` & ```pip install mysqlclient```
-    *Folder manipulation: 
+    * Folder manipulation: 
       * Shutils: ```pip install shutils```
     * Machine Learning libraries: 
       * Pytorch: ```pip install torch``` 
