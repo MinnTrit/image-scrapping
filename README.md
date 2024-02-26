@@ -41,16 +41,18 @@ Usage example:
     * The class method *color_extracting* of the class *ColorCode* can be used to achieve this desired behavior:
       * It takes in 2 keyword arguments, including *[folder_name, total_code]*. Where *folder_name* refers to the scrapped images folder, and the *total_code* refers to the number of color to be extracted from the image, which is *10* in this case. You can access the result of this process by accessing the attribute *output_list* of this class instance to see the result. 
 Usage example: 
-![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/9b2336d6-c487-4fba-b66a-3c064ddda9ed)
+![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/cbd3ad3b-ae9a-4b4c-989b-089eddf25e2a)
 
-After the completion of the process, you can refer to *sub_code_list.output_list* to see the result in the dataframe as the following image:
-![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/5b1af8d2-5f4d-42ab-b9af-498d585838d5)
+After the completion of the process, you can refer to *image_list.output_list* to see the result in the dataframe as the following image:
+![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/52c9a394-f9a4-47be-b658-4fc9e174f9e3)
 
   * Cleaning up the data frame to push the data to the database:
     * The class method *dataframe_converting* of the class *SubCode* can be used to achieve this desired behavior: 
       * It takes in 1 of these 3 possible keyword arguments, including *[excel file, list, dataframe]*, the excel file section will be divided to 2 sub-sections. The first one is for when the file was saved in the excel file (Your choice to save it or not) after the color extracting process has finsihed, and the second one is designed to work directly with the image score scrapped from the website.
-        * For the scrapped images data frame that we have made previously, this method will convert the full color code to break it down to individual color code. For instance, the image *0.png* that we have seen previously has its color codes at ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/05831e9e-b293-486d-bccf-2e6b540ad46c).
-        * This image will then be converted to the following result after calling this method ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/cca6e6c2-1285-49b1-9bf7-2eb1ed228ad6)
+        * For the scrapped images data frame that we have made previously, this method will convert the full color code to break it down to individual color code. For instance, the image *0.png* that we have seen previously has its color codes at ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/dd179400-a9d7-445c-9251-e4eb5486fc6b)
+.
+        * This image will then be converted to the following result after calling this method ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/3c60c1df-f239-4ea8-95d8-5e0903b068d2)
+
         * For the *image_score excel file*, the purpose is to convert the "image_name" column from *integer number*, for example, *0* to the string with *.png* extension as *0.png* and the "score" column to be cleaned and converted to *integer number*.
         * After calling this class method on the instance, you can refer to the attribute *result* of this instance to access the actual data frame result of this method.
 Usage example (You can pass in the dataframe from the previous process, for this example, the contents from the previous process were saved as the excel file):
