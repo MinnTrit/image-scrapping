@@ -44,7 +44,7 @@ Usage example:
 ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/9b2336d6-c487-4fba-b66a-3c064ddda9ed)
 
 After the completion of the process, you can refer to *image_output.output_list* to see the result in the dataframe as the following image:
-![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/afdaef51-1cbe-467f-a909-82e5a4b1666f)
+![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/5b1af8d2-5f4d-42ab-b9af-498d585838d5)
 
   * Cleaning up the data frame to push the data to the database:
     * The class method *dataframe_converting* of the class *SubCode* can be used to achieve this desired behavior: 
