@@ -60,7 +60,10 @@ class SubCode:
             return cls(result)
 
 def removing_image(folder_name): 
-    digit_num = folder_name[-1]
+    digit_num = ''
+    for character in str(folder_name):  
+        if character.isdigit(): 
+            digit_num += character
     validate_name = 'image_score' + digit_num + '.xlsx'
     try: 
         inner_df = pd.read_excel(validate_name, names=['image_name', 'score'])
