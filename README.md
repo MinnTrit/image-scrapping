@@ -1,4 +1,4 @@
-"# image-scrapping" - Total scrapped data points (Unique scalar color code) was more than 70k, and there was a total of 24k unique color codes out of those, expect the model to learn effectively when the total data points reach to 160k - 240k.
+Total scrapped data points (Unique scalar color code) was more than 70k, and there was a total of 24k unique color codes out of those, expect the model to learn effectively when the total data points reach to 160k - 240k.
 
 For Color Hunt source, since this page follows the infinite scroll, the Python code also supports user to resume the scrapping process from where it was in the previous scrapping process. 
 
@@ -11,20 +11,20 @@ For each source, the score feature will be sorted ascendingly and ranked with th
 ### INSTALLING THE NECCESSARIES LIBRARIES
   Some external libraries for the code that I have been used for this project: 
     * Web crawlling: 
-      -Playwright: ```pip install playwright```
+      * Playwright: ```pip install playwright```
     * Data Processing: 
-      -Ast: ```pip install AST``` 
-      -Pandas: ```pip install pandas```
-      -Numpy: ```pip install numpy```
+      * Ast: ```pip install AST``` 
+      * Pandas: ```pip install pandas```
+      * Numpy: ```pip install numpy```
     * Image processing: 
-      -Color Thief: ```pip install colorthief```
+      * Color Thief: ```pip install colorthief```
     *Database interactions: 
-      -SQLAlchemy & MySQLClient: ```pip install SQLAlchemy``` & ```pip install mysqlclient```
+      * SQLAlchemy & MySQLClient: ```pip install SQLAlchemy``` & ```pip install mysqlclient```
     *Folder manipulation: 
-      -Shutils: ```pip install shutils```
+      * Shutils: ```pip install shutils```
     * Machine Learning libraries: 
-      -Pytorch: ```pip install torch``` 
-      -Sklearn: ```pip install scikit-learn``` 
+      * Pytorch: ```pip install torch``` 
+      * Sklearn: ```pip install scikit-learn``` 
 
 ### How to use the customized module
   The main purpose of this module is to normalize the scrapped color code coming from Unsplash
@@ -60,5 +60,24 @@ Usage example (You can pass in the dataframe from the previous process, for this
 Usage example:
 ![image](https://github.com/MinnTrit/image-scrapping/assets/151976884/125c88b2-4545-4d60-b56c-354ffc9e1df6)
 
-
+### Preparing the targeted variable for the machine learning model: 
+  *As stated previously, each source should be ranked individually to avoid potential bias while fetching data from multiple sources, the code sipnet below will give you the general concept to rank the color code based on the *score* of its own source: 
+```
+def ranking_column(data_frame): 
+    column_list = data_frame.columns.tolist()
+    column_list = [column.lower() for column in column_list]
+    if 'score' in column_list: 
+        quantile = [0, 0.25, 0.5, 0.75, 1]
+        labels = [0, 1, 2, 3]
+        data_frame['score'] = pd.to_numeric(data_frame['score'])
+        data_frame.sort_values(by='score', ascending=True, inplace=True)
+        data_frame.insert(len(column_list), 'rank', pd.qcut(data_frame['score'], q=quantile, labels=labels))
+    else: 
+        print(f"Can't conduct ranking for {data_frame}, no column score found")
+    return data_frame
+df2 = ranking_column(df2)
+df3 = ranking_column(df3) 
+df4 = ranking_column(df4)
+```
+Now that with the targeted vairables and the color codes preproccessed, you can use these data samples to train the model :3, thanks for reading my notes
 
