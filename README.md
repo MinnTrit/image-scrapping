@@ -7,7 +7,7 @@ Each palette of 5 or 4 color codes will be processed step by step to load the sc
 For Unpslash, the source containing image (Most of the data points have been coming from this source), there will be the newly-created folder while attempting to run the Python file, which will later be used to store the scrapped images, the score feature in this case will be treated as "How many times that image being downloaded". 
 
 For each source, the score feature will be sorted ascendingly and ranked with the targeted variable [0, 1, 2, 3] to avoid potential bias while combining multiple sources and rank all of them once. 
-### Diagram
+### DIAGRAM
 ![Diagram](https://github.com/MinnTrit/image-scrapping/assets/151976884/5effffbb-5ce8-4a80-a1ce-1d5c7c208f1b)
 * The 4 sources will be scrapped using different files, each will have its own pipeline to push the data to the destinated source, which will be later used for the training of the model
 
