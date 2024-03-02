@@ -8,7 +8,7 @@ For Unpslash, the source containing image (Most of the data points have been com
 
 For each source, the score feature will be sorted ascendingly and ranked with the targeted variable [0, 1, 2, 3] to avoid potential bias while combining multiple sources and rank all of them once. 
 ### DIAGRAM
-![Diagram](https://github.com/MinnTrit/image-scrapping/assets/151976884/7bce861e-0635-417d-937b-51b94c938aec)
+![Diagram](https://github.com/MinnTrit/image-scrapping/assets/151976884/c67efb79-1430-40bd-840e-5a28220150cb)
 * The 4 sources will be scrapped using different files, each will have its own pipeline to push the data to the destinated source, which will be later used for the training of the model
 
 ### WORKING ALONG WAY
