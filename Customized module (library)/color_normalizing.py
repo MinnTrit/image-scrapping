@@ -41,6 +41,7 @@ class SubCode:
                 data_frame['image_num'] = data_frame['image_num'].astype(str) + '.png'
                 data_frame.rename(columns={'image_num': 'image_name'}, inplace=True)
                 data_frame['score'] = data_frame['score'].str.replace(',', '')
+                data_frame['score'] = data_frame['score'].str.replace('--', '0')
                 data_frame['score'] = pd.to_numeric(data_frame['score'])
                 data_frame = data_frame.loc[:, ['image_name', 'score']]
                 result = data_frame
